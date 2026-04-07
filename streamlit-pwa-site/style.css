@@ -9,8 +9,7 @@ body, html {
 iframe {
     border: none;
     width: 100%;
-    /* Hide the streamlit footer */
-    height: calc(100% + 45px); 
+    height: 100%;
     display: block;
 }
 

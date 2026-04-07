@@ -3,11 +3,11 @@ const CONFIG = {
     cacheVersion: "v1",
 
     // General App Info
-    appName: "My App",
-    appShortName: "MyApp",
+    appName: "AI-Hab Identify",
+    appShortName: "AI-Hab Identify",
     
     // Iframe Config
-    iframeUrl: "https://doc-hello.streamlit.app?embed=true&show_footer=false",
+    iframeUrl: "https://aihab-uk-api-usage-demo.hf.space?embed=true&show_footer=false",
     
     // Visuals & Icons
     themeColor: "#0E1117",

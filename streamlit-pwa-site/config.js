@@ -1,6 +1,6 @@
 const CONFIG = {
     // Cache Version
-    cacheVersion: "v2",
+    cacheVersion: "v3",
 
     // General App Info
     appName: "AI-Hab Identify",
@@ -12,7 +12,7 @@ const CONFIG = {
     // Visuals & Icons
     themeColor: "#0d9c38",
     backgroundColor: "#0E1117",
-    appIcon: "/icon.png",
+    appIcon: "icon.png",
     
     // PWA Display Logic
     displayMode: "standalone",

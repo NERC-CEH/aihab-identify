@@ -1,26 +1,33 @@
 {
+  "id": "./",
   "name": "AI-Hab Identify",
-  "short_name": "AI-Hab Identify",
-  "start_url": "/",
+  "short_name": "AI-Hab",
+  "description": "AI-Hab Identify installed as a mobile web app.",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
   "background_color": "#0E1117",
-  "theme_color": "#0E1117",
+  "theme_color": "#0d9c38",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/icon.png",
+      "src": "icon.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/icon.png",
+      "src": "icon.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/icon.png",
+      "src": "icon.png",
       "sizes": "1024x1024",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

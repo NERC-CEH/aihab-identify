@@ -1,6 +1,6 @@
 const CONFIG = {
     // Cache Version
-    cacheVersion: "v5",
+    cacheVersion: "v6",
 
     // General App Info
     appName: "AI-Hab Identify",

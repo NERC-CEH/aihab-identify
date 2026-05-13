@@ -1,4 +1,6 @@
 let deferredInstallPrompt = null;
+const CAMPAIGN_MAP_URL = 'https://nerc-ceh.github.io/aihab-campaign-map/';
+const CAMPAIGN_HELP_URL = 'https://nerc-ceh.github.io/aihab-campaign-map/help.html';
 
 // Apply Config
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // iframe
     const iframe = document.getElementById('main-iframe');
     iframe.src = CONFIG.iframeUrl;
+
+    setupIframeSwitcher(iframe);
     
     // Body Background
     document.body.style.backgroundColor = CONFIG.backgroundColor;
@@ -23,6 +27,37 @@ document.addEventListener('DOMContentLoaded', () => {
     updateInstallBanner();
     updateOnlineStatus();
 });
+
+function setupIframeSwitcher(iframe) {
+    const switchButtons = document.querySelectorAll('.iframe-switch-btn');
+    if (!iframe || switchButtons.length === 0) {
+        return;
+    }
+
+    const iframeTargets = {
+        main: CONFIG.iframeUrl,
+        campaign: CAMPAIGN_MAP_URL,
+        help: CAMPAIGN_HELP_URL
+    };
+
+    switchButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const target = button.dataset.iframeTarget;
+            const nextUrl = iframeTargets[target];
+            if (!nextUrl || iframe.src === nextUrl) {
+                return;
+            }
+
+            iframe.src = nextUrl;
+
+            switchButtons.forEach((btn) => {
+                const isActive = btn === button;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-pressed', String(isActive));
+            });
+        });
+    });
+}
 
 window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
